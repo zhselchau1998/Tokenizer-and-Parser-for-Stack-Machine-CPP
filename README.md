@@ -1,2 +1,0 @@
-# CS320Assignment2
-
