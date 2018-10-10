@@ -1,8 +1,14 @@
-#ifndef __PROG2_1_HPP__
-#define
+#include <string>
+#include <vector>
+
+using namespace std;
+
+#ifndef __TOKENIZER_HPP__
+#define __TOKENIZER_HPP__
 
     class Tokenizer{
-    
+        private:
+            vector<string> tokens;
         public:
             Tokenizer();
             ~Tokenizer();
