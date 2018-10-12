@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
         
         for(int i=0; i<inputs.size(); i++){
             output = output + inputs[i];
-            if(!i+1==inputs.size())
+            if(i+1!=inputs.size())
                 output = output + ",";
         }
         output = output + "\n";
