@@ -29,7 +29,7 @@ void Tokenizer :: Tokenize(string input){
         while(getline(stream, stest, ' ')){//Goes through whole string stream
             
             if(stest.find_first_not_of("0123456789") == string::npos){//int check
-                cout<<"you typed an int\n";
+                //cout<<"you typed an int\n";
                 this->tokens.push_back(stest);
                 continue;
             }
@@ -44,7 +44,9 @@ void Tokenizer :: Tokenize(string input){
             
         }
     }catch(const char *e){
-        cout << e << stest << endl;
+        cerr << e << stest << endl;
+        string et =e+stest+"\n";
+        throw et;
     }
 }
 
