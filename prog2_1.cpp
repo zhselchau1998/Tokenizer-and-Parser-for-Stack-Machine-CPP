@@ -44,7 +44,7 @@ void Tokenizer :: Tokenize(string input){
             
         }
     }catch(const char *e){
-        cerr << e << stest << endl;
+        //cerr << e << stest << endl;
         string et =e+stest+"\n";
         throw et;
     }
