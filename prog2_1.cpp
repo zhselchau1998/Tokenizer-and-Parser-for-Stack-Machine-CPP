@@ -28,7 +28,7 @@ void Tokenizer :: Tokenize(string input){
     try{
         while(getline(stream, stest, ' ')){//Goes through whole string stream
             
-            if(stringstream(stest) >> intTest){//int check
+            if(stest.find_first_not_of("0123456789") == string::npos){//int check
                 //cout<<"you typed an int\n";
                 this->tokens.push_back(stest);
                 continue;
