@@ -49,10 +49,9 @@ int main(int argc, char *argv[]){
                 if(j+1!=inputs[i].size())
                     output = output + " ";
             }
-            cout << "Parse error on line " << lineNum << ": " << output << endl;
+            cout << "Parse error on line " << i+1 << ": " << output << endl;
             return 0;
         }
-
     cout << output;
 }
 
