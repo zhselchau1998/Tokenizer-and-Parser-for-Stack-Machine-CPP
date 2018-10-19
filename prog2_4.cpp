@@ -19,10 +19,10 @@ int main(int argc, char *argv[]){
     Tokenizer *tokenizer = new Tokenizer();
     Parser *parser = new Parser();
     int lineNum = 0;
-    vector<vector<string>> inputs;
+    vector<vector<string>> inputs;//For storing lines of tokens
     string output = "";
 
-    while(getline(infile, line)){
+    while(getline(infile, line)){//Tokenization (Same as prog2_2)
 
         lineNum++;
         try{
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
             cerr << "Error on line " << lineNum << ": " << e;
             return 0;
         }    
-        inputs.push_back(tokenizer->GetTokens());
+        inputs.push_back(tokenizer->GetTokens());//Push a vector to the end of inputs
 
         for(int i=0; i<inputs[lineNum-1].size(); i++){
             output = output + inputs[lineNum-1][i];
@@ -41,10 +41,10 @@ int main(int argc, char *argv[]){
         output = output + "\n";
     }
 
-    for(int i=0; i<inputs.size(); i++)
-        if(!parser->Parse(inputs[i])){
+    for(int i=0; i<inputs.size(); i++)//Parsing step
+        if(!parser->Parse(inputs[i])){//Check parsing
             output="";
-            for(int j=0; j<inputs[i].size(); j++){
+            for(int j=0; j<inputs[i].size(); j++){//Failed so throw error
                 output = output + inputs[i][j];
                 if(j+1!=inputs[i].size())
                     output = output + " ";
@@ -52,6 +52,7 @@ int main(int argc, char *argv[]){
             cout << "Parse error on line " << i+1 << ": " << output << endl;
             return 0;
         }
+    
     cout << output;
 }
 

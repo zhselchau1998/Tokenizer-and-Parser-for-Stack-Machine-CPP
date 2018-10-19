@@ -6,7 +6,7 @@ using namespace std;
 #ifndef __PARSER_HPP__
 #define __PARSER_HPP__
 
-    class Parser{
+    class Parser{//No storage needed
         private:
             
         public:

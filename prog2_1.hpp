@@ -8,7 +8,7 @@ using namespace std;
 
     class Tokenizer{
         private:
-            vector<string> tokens;
+            vector<string> tokens;//For storing the tokens
         public:
             Tokenizer();
             ~Tokenizer();

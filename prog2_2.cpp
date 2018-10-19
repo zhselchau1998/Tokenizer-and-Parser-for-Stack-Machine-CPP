@@ -21,16 +21,16 @@ int main(int argc, char *argv[]){
     string output = "";
 
     while(getline(infile, line)){
-        lineNum++;
+        lineNum++;//For cerr
         try{
             tokenizer->Tokenize(line);
-        }catch(const string e){
+        }catch(const string e){//Catch the error that was rethrown by prog2_1
             cerr << "Error on line " << lineNum << ": " << e;
             return 0;
         }    
         inputs = tokenizer->GetTokens();
         
-        for(int i=0; i<inputs.size(); i++){
+        for(int i=0; i<inputs.size(); i++){//Not failed so add to the output
             output = output + inputs[i];
             if(i+1!=inputs.size())
                 output = output + ",";

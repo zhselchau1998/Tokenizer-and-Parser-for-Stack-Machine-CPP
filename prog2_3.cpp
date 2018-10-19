@@ -7,12 +7,12 @@
 
 using namespace std;
 
-Parser :: Parser(){
+Parser :: Parser(){//No storage needed
 
 }
 
 
-Parser :: ~Parser(){
+Parser :: ~Parser(){//No storage declared
 
 }
 
@@ -47,19 +47,3 @@ bool Parser :: Parse(vector<string> inputs){
     }    
     return lengthTest;
 }
-
-/*
-int main(){
-    
-    Parser *parser = new Parser();
-    vector<string> vect{"get", "12"};
-
-    if(parser->Parse(vect))
-        cout << "Success!\n";
-    else
-        cout << "Fail.\n";
-        
-}*/
-
-
-
